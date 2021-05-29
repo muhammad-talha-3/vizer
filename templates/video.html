@@ -1,0 +1,110 @@
+﻿{%extends 'base.html'%}
+
+{% block title %}
+Focus
+{% endblock %}
+
+{% block content %}
+
+        <header id="home" class="section">
+            <div class="header_main">
+                <!-- header inner -->
+                <div class="header">
+                    <div class="container">
+                        <div class="row">
+                                <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col logo_section">
+                                <div class="full">
+                                    <div class="center-desk">
+                                        <div class="logo">
+                                            <a href="{{url_for('home')}}"><img src="{{url_for('static',filename = images['logo'])}}" style="max-width: 40%;"></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xl-9 col-lg-9 col-md-9 col-sm-9">
+                                <div class="menu-area">
+                                    <div class="limit-box">
+                                        <nav class="main-menu">
+                                            <ul class="menu-area-main">
+                                                <li><a href="{{url_for('home')}}">Home</a></li>
+                                                <li><a href="#">About</a></li>
+                                                <li><a href="#">Guidlines</a></li>
+
+                                                <li><a href="#">feedback</a></li>
+                                            </ul>
+                                        </nav>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- end header inner -->
+                <section>
+                    <div class="bannen_inner">
+                        <div class="container">
+                            <div class="row marginii">
+                                <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
+                                    <div class="taital_main">
+
+                                    </div>
+                                    <h1 class="web_text"><strong>Upload your video here</strong></h1>
+                                    <form action="." method="POST" enctype="multipart/form-data">
+                                        <label for="video">Filename:</label>
+                                        <input class="form-control" type="file" name="video" id="vid" />
+                                        <!-- <br /> -->
+                                        {% if error %}  
+                                            <p><strong>Error</strong>: {{error}}</p>  
+                                        {% endif %}  
+                                        <br/>
+                                        <select class="form-control" id="rating" name="category">
+                                            <option value="0">Big nose</option>
+                                            <option value="1" selected>Bikes</option>
+                                            <option value="2">Birds</option>
+                                            <option value="3">Busses</option>
+                                            <option value="4">Cars</option>
+                                            <option value="5">Cats</option>
+                                            <option value="6">Chairs</option>
+                                            <option value="7">Dark images</option>
+                                            <option value="8">Dogs</option>
+                                            <option value="9">Flowers</option>
+                                            <option value="10">Humans</option>
+                                            <option value="11">Laptops</option>
+                                            <option value="12">Sign board</option>
+                                            <option value="13">Table</option>
+                                            <option value="14">Tweety</option>
+                                            
+                                        </select>
+                                        <!-- <br/> -->
+                                        <label for="image">Choose character you want to remove:</label>
+                                        <input class = "form-control" type="file" name="image" id="img" />
+                                        <br />
+                                        <br/>
+
+
+                                        <h4>Start Analyze</h4>
+
+                                        <button class = "get_bg submit-btn" onclick="myFunction()">Start</button>
+
+                                        <script>
+                                            function myFunction() {
+                                                alert("Your video is being processed please wait!");
+                                            }
+                                        </script>
+                                    </form>
+                                </div>
+                                <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
+                                    <div class="img-box">
+                                        <figure><img src="{{url_for('static',filename = images['cover_img'])}}" alt="img" / style="max-width: 100%;"></figure>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </section>
+        </header>
+
+
+
+{% endblock %}

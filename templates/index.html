@@ -1,0 +1,293 @@
+﻿{%extends 'base.html'%}
+
+{% block title %}
+Focus
+{% endblock %}
+
+{% block content %}
+
+<header id="home" class="section">
+        <div class="header_main">
+            <!-- header inner -->
+            <div class="header">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col logo_section">
+                            <div class="full">
+                                <div class="center-desk">
+                                    <div class="logo">
+                                        <a href="{{url_for('home')}}"><img src="{{url_for('static',filename = images['logo'])}}" style="max-width: 40%;"></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-9 col-lg-9 col-md-9 col-sm-9">
+                            <div class="menu-area">
+                                <div class="limit-box">
+                                    <nav class="main-menu">
+                                        <ul class="menu-area-main">
+                                            <li><a href="{{url_for('home')}}">Home</a></li>
+                                            <li><a href="#">About</a></li>
+                                            <li><a href="#">Guidlines</a></li>
+
+                                            <li><a href="#">feedback</a></li>
+                                        </ul>
+                                    </nav>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- end header inner -->
+            <section>
+                <div class="bannen_inner">
+                    <div class="container">
+                        <div class="row marginii">
+                            <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
+                                <div class="taital_main">
+
+                                </div>
+                                <h1 class="web_text"><strong>Welcome to VIZER !</strong></h1>
+                                <p class="donec_text">
+                                    Handy tool designed for extraction and viewing of metadata contained in AVI, MP4 and MKV files.Lets analyze the video.
+                                </p>
+                                <a class="get_bg" href="{{url_for('video')}}" role="button">Get Started</a>
+
+                            </div>
+                            <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
+                                <div class="img-box">
+                                    <figure><img src="{{url_for('static',filename = images['cover_img'])}}" alt="img" / style="max-width: 100%;"></figure>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </section>
+
+        </div>
+    </header>
+    <!-- banner end -->
+    <!-- choose start -->
+    <div id="about" class="choose_section">
+        <div class="container">
+            <div class="col-sm-12">
+                <h1 class="choose_text">Why you should <span class="color">choose us</span></h1>
+                <p class="lorem_text">Video Analyzer founded in 2020, is a leading provider of software products for encoding, decoding, processing, receiving and transmission of video data in different formats.</p>
+            </div>
+        </div>
+    </div>
+    <div class="choose_section_2">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-4">
+                    <div class="power_full">
+                        <div class="icon">
+                            <a href="#"><img src="{{url_for('static',filename = home_imgs[0])}}"></a>
+                        </div>
+                        <h2 class="powerful_text">Powerful Features</h2>
+                        <p class="making_tetx">As our Analyzer give fast and accurate results </p>
+                    </div>
+                    
+                </div>
+                <div class="col-sm-4">
+                    <div class="power">
+                        <div class="icon">
+                            <a href="#"><img src="{{url_for('static',filename = home_imgs[1])}}"></a>
+                        </div>
+                        <h2 class="totaly_text">Totaly Optimized</h2>
+                        <p class="making">Making it look like totally optimized ad relaible </p>
+                    </div>
+                   
+                </div>
+                <div class="col-sm-4">
+                    <div class="power">
+                        <div class="icon">
+                            <a href="#"><img src="{{url_for('static',filename = home_imgs[2])}}"></a>
+                        </div>
+                        <h2 class="totaly_text">Worldwide Support</h2>
+                        <p class="making">As it is web based app so anyone can access it </p>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="service" class="choose_section">
+        <div class="container">
+            <div class="col-sm-12">
+                <h1 class="choose_text"><span class="color"> Guidlines</span></h1>
+                
+            </div>
+        </div>
+    </div>
+
+
+    <div class="choose_section_2">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-4">
+                    <div class="about_inner">
+                        <div class="icon">
+                            <a href="{{url_for('video')}}"><img src="{{url_for('static',filename = home_imgs[3])}}"></a>
+                        </div>
+                        <h2 class="totaly_text">Upload your video</h2>
+                        <p class="making">upload the video that you want to analyze from your PC ad just click upload button.</p>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="about_inner">
+                        <div class="icon">
+                            <a href="{{url_for('video')}}"><img src="{{url_for('static',filename = home_imgs[4])}}"></a>
+                        </div>
+                        <h2 class="totaly_text">Upload a picture</h2>
+                        <p class="making">here upload the picture of character that you want to eliminate from the video.</p>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="about_inner">
+                        <div class="icon">
+                            <a href="#"><img src="{{url_for('static',filename = home_imgs[5])}}"></a>
+                        </div>
+                        <h2 class="totaly_text">just a Moment</h2>
+                        <p class="making">Wait a moment until your video is being processed.</p>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+
+    <!-- service end -->
+    <!-- contact start -->
+    <div id="contact" class="contact_section">
+        <div class="container">
+            <div class="col-sm-12">
+                <h1 class="choose_text">FeedBack</h1>
+                <p class="lorem_text">Your feed back means alot to us !</p>
+            </div>
+        </div>
+    </div>
+    <div class="contact_section_2">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="input_main">
+                        <div class="container">
+                            <form action="/action_page.php">
+                                <div class="form-group">
+                                    <input type="text" class="email-bt" placeholder="Name" name="Name">
+                                </div>
+                                <div class="form-group">
+                                    <input type="text" class="email-bt" placeholder="Email" name="Email">
+                                </div>
+                                <div class="form-group">
+                                    <input type="text" class="email-bt" placeholder="Phone" name="Email">
+                                </div>
+                                <div class="form-group">
+                                    <textarea class="massage-bt" placeholder="Message" rows="5" id="comment" name="text"></textarea>
+                                </div>
+                            </form>
+
+                        </div>
+                        <div class="send_btn">
+                            <button type="button" class="main_bt"><a href="#">Send</a></button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="section_right">
+                        <img src="{{url_for('static',filename = images['right_sec'])}}" style="max-width: 100%;">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="contact_section_3">
+        <div class="container">
+
+            <div class="contact_product">
+                <div class="row">
+                    <div class="col-sm-6 col-md-6 col-lg-2">
+                        <div class="footer-logo"><img src="{{url_for('static',filename = images['logo'])}}" style="max-width: 60%;"></div>
+                    </div>
+                    <div class="col-sm-6 col-md-6 col-lg-4">
+                        <h1 class="useful_text">USEFUL LINK</h1>
+                        <div class="menu">
+                            <ul>
+                                <li>
+                                    <a href="{{url_for('home')}}"><img src="{{url_for('static',filename = images['built_icon'])}}" style="padding-right: 10px;">Home</a>
+
+                                </li>
+                                <li>
+                                    <a href="#"><img src="{{url_for('static',filename = images['built_icon'])}}" style="padding-right: 10px;">About</a>
+                                </li>
+                                <li>
+                                    <a href="#"><img src="{{url_for('static',filename = images['built_icon'])}}" style="padding-right: 10px;">Guidelines</a>
+                                </li>
+                                <li>
+                                    <a href="#"><img src="{{url_for('static',filename = images['built_icon'])}}" style="padding-right: 10px;">FeedBack</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-sm-12 col-md-12 col-lg-6">
+
+                        <div class="input-group mb-3 margin-top-30">
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="icon_main">
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div class="menu_text">
+                            <ul>
+                                
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- contact end -->
+    <!-- Javascript files-->
+    <script src="js/jquery.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+
+
+    <script src="js/jquery-3.0.0.min.js"></script>
+    <script src="js/plugin.js"></script>
+    <!-- sidebar -->
+    <script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
+    <script src="js/custom.js"></script>
+    <!-- javascript -->
+    <script src="js/owl.carousel.js"></script>
+    <script src="https:cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $(".fancybox").fancybox({
+                openEffect: "none",
+                closeEffect: "none"
+            });
+
+            $(".zoom").hover(function() {
+
+                $(this).addClass('transition');
+            }, function() {
+
+                $(this).removeClass('transition');
+            });
+        });
+    </script>
+
+
+{% endblock %}
+
